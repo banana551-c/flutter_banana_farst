@@ -11,6 +11,23 @@ void main() {
     ),
   );
 
+  final col = Column(
+    //ここにconst↓書くと軽くなるからおすすめ
+    //mainAxisAlignment: MainAxisAlignment.center,
+    //crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      Image.network('https://flutter-image-network.web.app/inu.jpeg'),
+    ],
+  );
+
+  final con = Container(
+    color: Colors.teal.shade300,
+    width: 350,
+    height: 300,
+    child: Text('ただバナナが食べたくて'),
+    alignment: Alignment.bottomCenter,
+  );
+
   //memo: 問題点　以下のrowが反映されない＊9.28
   final row = Row(
     children: [Text('ただ')],
